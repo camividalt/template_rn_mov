@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS(BLUE.MOVISTAR, 1),
   },
   logoReactNative: {
-    width: 110,
-    height: 100,
+    width: 90,
+    height: 80,
     alignSelf: 'center'
   },
   logoApple: {
