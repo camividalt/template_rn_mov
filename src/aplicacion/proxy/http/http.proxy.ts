@@ -4,7 +4,7 @@ import {
     HttpParamsBody,
     HttpProxyModel,
     HttpResponse,
-} from '../../../dominio/objeto/OBJ_HttpProxy';
+} from '../../../dominio/objeto/Http.proxy.objeto';
 
 export const useHttpProxy = (baseUrl: string): HttpProxyModel => {
     const instancia = axios.create({
@@ -45,7 +45,6 @@ export const useHttpProxy = (baseUrl: string): HttpProxyModel => {
                     params: params.params,
                 })
                 .then(res => {
-                    console.log('[LOGIN]post', res);
                     if (res?.data) {
                         return resolve({
                             error: false,
@@ -57,7 +56,6 @@ export const useHttpProxy = (baseUrl: string): HttpProxyModel => {
                     );
                 })
                 .catch(error => {
-                    console.log('[LOGIN]catch post', error);
                     return resolve(controlarErrorHttp(error));
                 });
         });

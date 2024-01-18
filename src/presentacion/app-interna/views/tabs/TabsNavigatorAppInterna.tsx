@@ -3,28 +3,27 @@ import {
     BottomTabBarProps,
     createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
-import {OBJMenuItem} from '../../../../dominio/objeto/autenticacion/OBJ_MenuItem';
-import {useEffect, useState} from 'react';
-import {useMenuController} from '../../../../aplicacion/controladores/MenuController';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {BLUE, COLORS, GRAY, WHITE} from '../../../assets/styles/Colors';
-import {Tienda} from '../tienda/Tienda';
-import {Home} from '../home/Home';
-import {Club} from '../club/Club';
-import {Perfil} from '../perfil/perfil';
-import {DrawerActions} from '@react-navigation/native';
+import { OBJMenuItem } from '../../../../dominio/objeto/autenticacion/MenuItem.objeto';
+import { useEffect, useState } from 'react';
+import { useMenuControlador } from '../../../../aplicacion/controladores/Menu.controlador';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { BLUE, COLORS, GRAY, WHITE } from '../../../assets/styles/Colors';
+import { Tienda } from '../tienda/Tienda';
+import { Home } from '../home/Home';
+import { Club } from '../club/Club';
+import { Perfil } from '../perfil/Perfil';
+import { DrawerActions } from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
 
-interface RenderTabBarProps extends BottomTabBarProps {}
+interface RenderTabBarProps extends BottomTabBarProps { }
 
-const RenderTabBar = ({state, navigation}: RenderTabBarProps) => {
+const RenderTabBar = ({ state, navigation }: RenderTabBarProps) => {
     const [menus, setMenus] = useState<OBJMenuItem[]>([]);
-    const {obtenerMenusBottomNav} = useMenuController();
+    const { obtenerMenusBottomNav } = useMenuControlador();
 
     useEffect(() => {
         obtenerMenusBottomNav().then(res => {
-            console.log('MENUS', res);
             setMenus(res);
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -66,7 +65,7 @@ const RenderTabBar = ({state, navigation}: RenderTabBarProps) => {
                         <TouchableOpacity
                             accessibilityRole="button"
                             accessibilityState={
-                                isFocused ? {selected: true} : {}
+                                isFocused ? { selected: true } : {}
                             }
                             onPress={onPress}
                             onLongPress={onLongPress}
@@ -110,5 +109,5 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS(WHITE, 1),
         paddingVertical: 6,
     },
-    menuItem: {flex: 1, alignItems: 'center'},
+    menuItem: { flex: 1, alignItems: 'center' },
 });

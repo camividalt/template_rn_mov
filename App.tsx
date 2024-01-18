@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
 import {RootNavigation} from './src/presentacion/root-navigation/RootNavigation';
-import {store} from './src/aplicacion/proxy/stores/reduxStore';
+import {store} from './src/aplicacion/proxy/stores/Redux.store';
 import {Provider} from 'react-redux';
 import 'react-native-get-random-values';
 import 'react-native-gesture-handler';

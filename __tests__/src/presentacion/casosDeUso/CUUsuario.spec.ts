@@ -1,11 +1,11 @@
-import { CryptoObj } from "../../../../src/dominio/objeto/OBJ_CryptoJS";
-import { useHttpProxy } from "../../../../src/aplicacion/proxy/http/http.proxy";
-import { HttpProxyModel } from "../../../../src/dominio/objeto/OBJ_HttpProxy";
-import { CUUsuario } from '../../../../src/aplicacion/casosDeUso/CUUsuario';
-import { CUUsuarioModel } from "../../../../src/dominio/modelos/autenticacion/Modelo_Usuario";
-import { OBJ_Utils } from "../../../../src/dominio/objeto/OBJ_Utils";
-import { useCryptoJS } from "../../../../src/aplicacion/proxy/encriptacion/cryptojs.proxy";
-import { UtilsService } from "../../../../src/aplicacion/proxy/utiles/utils.service";
+import { CryptoObj } from "../../../../src/dominio/objeto/CryptoJS.objeto";
+import { useHttpProxy } from "../../../../src/aplicacion/proxy/http/Http.proxy";
+import { HttpProxyModel } from "../../../../src/dominio/objeto/Http.proxy.objeto";
+import { CUUsuario } from '../../../../src/aplicacion/casos-de-uso/Usuario';
+import { CUUsuarioModel } from "../../../../src/dominio/modelos/autenticacion/Usuario.modelo";
+import { OBJ_Utils } from "../../../../src/dominio/objeto/Utils.objeto";
+import { useCryptoJS } from "../../../../src/aplicacion/proxy/encriptacion/CryptoJS.proxy";
+import { UtilsService } from "../../../../src/aplicacion/proxy/utiles/UtilsService";
 // jest.mock('../../../../src/aplicacion/proxy/http.proxy')
 // jest.mock('../../../../src/aplicacion/proxy/cryptojs.proxy')
 
