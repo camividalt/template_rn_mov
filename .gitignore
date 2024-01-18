@@ -7,21 +7,22 @@
 */yarn.lock
 #config de package-lock local
 */package-lock.json
+package-lock.json
 #dependencias del proyecto locales
 */node_modules/
 /node_modules/
 /vendor
 
-ReactNative_web/android/.gradle
-ReactNative_web/android/build
-ReactNative_web/android/app/build
+android/.gradle
+android/build
+android/app/build
 
-ReactNative_web/ios/build
-ReactNative_web/ios/Pods
-ReactNative_web/ios/DerivedData
-ReactNative_web/vendor
-ReactNative_web/ios/.xcode.env.local
-ReactNative_web/ios/Podfile.lock
+ios/build
+ios/Pods
+ios/DerivedData
+vendor
+ios/.xcode.env.local
+ios/Podfile.lock
 
-ReactNative_web/coverage/
+coverage/
 
