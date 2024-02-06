@@ -1,19 +1,19 @@
-import React, {useEffect, useState} from 'react';
-import {useUsuarioControlador} from '../../../aplicacion/controladores/Usuario.controlador';
+import React, { useEffect, useState } from 'react';
+import { useUsuarioControlador } from '../../../aplicacion/controladores/Usuario.controlador';
 import Header from '../componentes/Header';
 import Box from '../componentes/Box';
-import {InputMovistar} from '../../componentes/input-movistar/InputMovistar';
-import {UtilsService} from '../../../aplicacion/proxy/utiles/UtilsService';
-import {BotonMovistar} from '../../componentes/boton-movistar/BotonMovistar';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {AutenticacionStack} from '../../root-navigation/RootNavigationTypes';
-import {MostrarNombreUsuario} from '../componentes/MostrarNombreUsuario';
-import {StyleSheet, View} from 'react-native';
-import {COLORS, GRAY} from '../../assets/styles/Colors';
+import { InputMovistar } from '../../componentes/input-movistar/InputMovistar';
+import { UtilsService } from '../../../aplicacion/proxy/utiles/UtilsService';
+import { BotonMovistar } from '../../componentes/boton-movistar/BotonMovistar';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { AutenticacionStack } from '../../root-navigation/RootNavigationTypes';
+import { MostrarNombreUsuario } from '../componentes/MostrarNombreUsuario';
+import { StyleSheet, View } from 'react-native';
+import { COLORS, GRAY } from '../../assets/styles/Colors';
 
 type Props = NativeStackScreenProps<AutenticacionStack>;
 
-export default ({navigation}: Props) => {
+export default ({ navigation }: Props) => {
     // const usuarioController = useUsuarioControlador();
 
     const [rut, setRut] = useState<string>('');
@@ -70,7 +70,7 @@ export default ({navigation}: Props) => {
             });
     };
 
-    const goBack = () => {};
+    const goBack = () => { };
 
     useEffect(() => {
         guardarUsuarioPersistencia({
@@ -132,7 +132,7 @@ export default ({navigation}: Props) => {
                     onPress={() => loginConCredenciales()}
                     loading={loading}
                     block
-                    style={{marginTop: 16}}>
+                    style={{ marginTop: 16 }}>
                     Iniciar Sesión
                 </BotonMovistar>
             </Box>
@@ -142,7 +142,7 @@ export default ({navigation}: Props) => {
 
                 <BotonMovistar
                     onPress={() => actualizarDatosUsuario()}
-                    style={{marginTop: 10}}>
+                    style={{ marginTop: 10 }}>
                     Actualizar nombre en store
                 </BotonMovistar>
             </View>

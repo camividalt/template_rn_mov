@@ -15,12 +15,11 @@ interface LabelProps {
 }
 
 export const Label = (props: LabelProps) => {
-    const { text, size, align, font, color, onPress, style, children } = props;
     let fontWeightStyle: {
         fontFamily: string
     };
 
-    switch (font) {
+    switch (props.font) {
         case 'light':
             fontWeightStyle = Telefonica.light;
             break;
@@ -42,13 +41,13 @@ export const Label = (props: LabelProps) => {
     };
 
     return (
-        <Text style={[fontWeightStyle, style,
-            size ? { fontSize: size } : { fontSize: 16 },
-            align ? { textAlign: align } : { textAlign: 'center' },
-            color ? { color: color } : { color: COLORS(GRAY[6], 1) }]}
+        <Text style={[fontWeightStyle, props.style,
+            props.size ? { fontSize: props.size } : { fontSize: 16 },
+            props.align ? { textAlign: props.align } : { textAlign: 'center' },
+            props.color ? { color: props.color } : { color: COLORS(GRAY[6], 1) }]}
         >
-            {text}
-            {children}
+            {props.text}
+            {props.children}
         </Text>
     );
 };

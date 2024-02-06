@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import { UsuarioStoreProxy } from '../../../dominio/objeto/stores/Usuario.store.proxy';
-import { ModeloUsuario } from '../../../dominio/modelos/autenticacion/Modelo_Usuario';
+import { ModeloUsuario } from '../../../dominio/modelos/autenticacion/Usuario.modelo';
 
 const initialState: { datos?: ModeloUsuario } = {};
 

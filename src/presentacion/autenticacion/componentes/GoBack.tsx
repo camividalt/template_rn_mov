@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Image, View, TouchableOpacity } from 'react-native';
 import { COLORS, WHITE } from '../../assets/styles/Colors';
 import { ICONS } from '../../assets/Assets';
-import { Label } from '../../componentes/Label/Label';
+import { Label } from '../../componentes/label/Label';
 
 const GoBack = ({ onPress }: { onPress: () => void }) => {
     return (

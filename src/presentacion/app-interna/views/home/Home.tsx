@@ -3,12 +3,11 @@
 import React from 'react';
 import { StyleSheet, View, Image } from 'react-native';
 /* -------------- Global Components ------------- */
-import Label from '../../../componentes/label/Label';
+import { Label } from '../../../componentes/label/Label';
 /* -----------   Utilities - Styles   ----------- */
 import { COLORS, BLUE } from '../../../assets/styles/Colors';
 import { isIosPlatform } from '../../../../aplicacion/proxy/utiles/Platform';
 import { IMAGES } from '../../../assets/Assets';
-
 
 export const Home = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useUsuarioControlador } from '../../../aplicacion/controladores/Usuario.controlador';
-import { Label } from '../../componentes/Label/Label';
+import { Label } from '../../componentes/label/Label';
 
 export const MostrarNombreUsuario = () => {
     const { obtenerUsuarioPersistencia } = useUsuarioControlador();
